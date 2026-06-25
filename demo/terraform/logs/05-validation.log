@@ -1,0 +1,94 @@
+################ VALIDATION ################
+=== 0. Deploy identity (scoped deployer, not root) ===
+------------------------------------------------------------------
+|                        GetCallerIdentity                       |
++---------+------------------------------------------------------+
+|  Account|  224848431296                                        |
+|  Arn    |  arn:aws:iam::224848431296:user/runracing-deployer   |
+|  UserId |  AIDATIWQCZDAGQQNWHZHU                               |
++---------+------------------------------------------------------+
+
+=== 1. ENDPOINT: GET https://c7ejbtbh50.execute-api.us-east-1.amazonaws.com/health ===
+{"status": "ok", "service": "runracing-demo-api", "region": "us-east-1", "checks": {"dynamodb": "ok", "s3": "ok", "kinesis": "ok", "secrets": "ok", "redis_endpoint_configured": "yes"}}
+HTTP_STATUS=200
+
+=== 2. STORAGE: DynamoDB item (written by Lambda) ===
+{
+    "Items": [
+        {
+            "note": {
+                "S": "demo health check"
+            },
+            "playerId": {
+                "S": "healthcheck-1782373248"
+            }
+        }
+    ],
+    "Count": 1,
+    "ScannedCount": 1,
+    "ConsumedCapacity": null
+}
+
+=== 2b. STORAGE: S3 replay object ===
+2026-06-25 15:40:49         17 healthcheck/check.txt
+
+=== 2c. STREAMING: Kinesis stream status + consumer ESM ===
+{
+    "Name": "runracing-demo-telemetry",
+    "Status": "ACTIVE",
+    "Encryption": "KMS"
+}
+[
+    {
+        "State": "Enabled",
+        "Source": "arn:aws:kinesis:us-east-1:224848431296:stream/runracing-demo-telemetry"
+    }
+]
+
+=== 3. SECURITY: S3 replays encryption (KMS) + public access block ===
+{
+    "SSEAlgorithm": "aws:kms",
+    "KMSMasterKeyID": "arn:aws:kms:us-east-1:224848431296:key/83fe7fcf-c058-4273-99da-fd7dffcad4e5"
+}
+{
+    "BlockPublicAcls": true,
+    "IgnorePublicAcls": true,
+    "BlockPublicPolicy": true,
+    "RestrictPublicBuckets": true
+}
+--- assets bucket encryption (SSE-S3 for CloudFront OAC) ---
+{
+    "SSEAlgorithm": "AES256"
+}
+
+=== 3b. SECURITY: DynamoDB SSE (CMK) ===
+{
+    "Status": "ENABLED",
+    "SSEType": "KMS",
+    "KMSMasterKeyArn": "arn:aws:kms:us-east-1:224848431296:key/83fe7fcf-c058-4273-99da-fd7dffcad4e5"
+}
+
+=== 3c. SECURITY: ElastiCache encryption (at-rest + in-transit) ===
+{
+    "AtRest": true,
+    "InTransit": true,
+    "Status": "available"
+}
+
+=== 3d. SECURITY: WAFv2 (CLOUDFRONT) web ACL ===
+[
+    {
+        "Name": "runracing-demo-cf",
+        "Id": "c8425c7d-0c43-47d6-93e8-3a34ed7c41b1"
+    }
+]
+
+=== 3e. SECURITY: Secrets Manager (KMS-encrypted) ===
+{
+    "Name": "runracing-demo-payment",
+    "KmsKeyId": "arn:aws:kms:us-east-1:224848431296:key/83fe7fcf-c058-4273-99da-fd7dffcad4e5"
+}
+
+=== 4. EDGE: CloudFront responds over TLS (https://dmuz9eerzslob.cloudfront.net) ===
+cloudfront HTTP_STATUS=403
+################ END VALIDATION ################

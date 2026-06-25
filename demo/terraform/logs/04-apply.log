@@ -1,0 +1,259 @@
+[0m[1mmodule.edge.aws_cloudfront_origin_access_control.assets: Creating...[0m[0m
+[0m[1mmodule.analytics.aws_glue_catalog_database.analytics: Creating...[0m[0m
+[0m[1mmodule.security.aws_kms_key.main: Creating...[0m[0m
+[0m[1mmodule.analytics.aws_iam_role.glue: Creating...[0m[0m
+[0m[1mmodule.analytics.aws_cloudwatch_log_group.firehose: Creating...[0m[0m
+[0m[1mmodule.compute.aws_iam_role.api: Creating...[0m[0m
+[0m[1mmodule.compute.aws_cloudwatch_log_group.api: Creating...[0m[0m
+[0m[1mmodule.networking.aws_vpc.main: Creating...[0m[0m
+[0m[1mmodule.analytics.aws_cloudwatch_log_group.consumer: Creating...[0m[0m
+[0m[1mmodule.analytics.aws_iam_role.consumer: Creating...[0m[0m
+[0m[1mmodule.edge.aws_cloudfront_origin_access_control.assets: Creation complete after 1s [id=E2O5ESF1DP161U][0m
+[0m[1mmodule.networking.aws_eip.nat: Creating...[0m[0m
+[0m[1mmodule.analytics.aws_glue_catalog_database.analytics: Creation complete after 1s [id=224848431296:runracing_demo_analytics][0m
+[0m[1mmodule.compute.aws_apigatewayv2_api.http: Creating...[0m[0m
+[0m[1mmodule.analytics.aws_cloudwatch_log_group.consumer: Creation complete after 1s [id=/aws/lambda/runracing-demo-consumer][0m
+[0m[1mmodule.analytics.aws_iam_role.firehose: Creating...[0m[0m
+[0m[1mmodule.analytics.aws_cloudwatch_log_group.firehose: Creation complete after 1s [id=/aws/kinesisfirehose/runracing-demo-to-lake][0m
+[0m[1mmodule.analytics.aws_iam_role.glue: Creation complete after 1s [id=runracing-demo-glue][0m
+[0m[1mmodule.data.aws_s3_bucket.data_lake: Creating...[0m[0m
+[0m[1mmodule.analytics.aws_iam_role.consumer: Creation complete after 1s [id=runracing-demo-consumer][0m
+[0m[1mmodule.data.aws_s3_bucket.replays: Creating...[0m[0m
+[0m[1mmodule.compute.aws_iam_role.api: Creation complete after 1s [id=runracing-demo-api-lambda][0m
+[0m[1mmodule.data.aws_s3_bucket.assets: Creating...[0m[0m
+[0m[1mmodule.compute.aws_cloudwatch_log_group.api: Creation complete after 5s [id=/aws/lambda/runracing-demo-api][0m
+[0m[1mmodule.analytics.aws_cloudwatch_log_stream.firehose: Creating...[0m[0m
+[0m[1mmodule.edge.aws_wafv2_web_acl.main: Creating...[0m[0m
+[0m[1mmodule.compute.aws_apigatewayv2_api.http: Creation complete after 5s [id=c7ejbtbh50][0m
+[0m[1mmodule.analytics.aws_iam_role_policy_attachment.glue_service: Creating...[0m[0m
+[0m[1mmodule.analytics.aws_iam_role.firehose: Creation complete after 5s [id=runracing-demo-firehose][0m
+[0m[1mmodule.compute.aws_iam_role_policy_attachment.vpc: Creating...[0m[0m
+[0m[1mmodule.analytics.aws_cloudwatch_log_stream.firehose: Creation complete after 1s [id=S3Delivery][0m
+[0m[1mmodule.compute.aws_apigatewayv2_stage.default: Creating...[0m[0m
+[0m[1mmodule.compute.aws_iam_role_policy_attachment.vpc: Creation complete after 0s [id=runracing-demo-api-lambda/arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole][0m
+[0m[1mmodule.analytics.aws_iam_role_policy_attachment.glue_service: Creation complete after 0s [id=runracing-demo-glue/arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole][0m
+[0m[1mmodule.edge.aws_wafv2_web_acl.main: Creation complete after 2s [id=c8425c7d-0c43-47d6-93e8-3a34ed7c41b1][0m
+[0m[1mmodule.networking.aws_eip.nat: Creation complete after 6s [id=eipalloc-09f47670f0993c39d][0m
+[0m[1mmodule.compute.aws_apigatewayv2_stage.default: Creation complete after 1s [id=$default][0m
+[0m[1mmodule.networking.aws_vpc.main: Creation complete after 8s [id=vpc-0ddaa60c5823085eb][0m
+[0m[1mmodule.networking.aws_internet_gateway.main: Creating...[0m[0m
+[0m[1mmodule.networking.aws_subnet.private[1]: Creating...[0m[0m
+[0m[1mmodule.networking.aws_subnet.public[1]: Creating...[0m[0m
+[0m[1mmodule.networking.aws_subnet.private[0]: Creating...[0m[0m
+[0m[1mmodule.networking.aws_security_group.lambda: Creating...[0m[0m
+[0m[1mmodule.networking.aws_subnet.public[0]: Creating...[0m[0m
+[0m[1mmodule.networking.aws_subnet.private[1]: Creation complete after 2s [id=subnet-05929ae485d6872ec][0m
+[0m[1mmodule.data.aws_s3_bucket.replays: Creation complete after 9s [id=runracing-demo-replays-224848431296][0m
+[0m[1mmodule.data.aws_s3_bucket_versioning.replays: Creating...[0m[0m
+[0m[1mmodule.data.aws_s3_bucket_lifecycle_configuration.replays: Creating...[0m[0m
+[0m[1mmodule.networking.aws_subnet.private[0]: Creation complete after 2s [id=subnet-0734c5790b892597a][0m
+[0m[1mmodule.data.aws_s3_bucket_public_access_block.replays: Creating...[0m[0m
+[0m[1mmodule.networking.aws_internet_gateway.main: Creation complete after 2s [id=igw-0402e54b54f962d3e][0m
+[0m[1mmodule.data.data.aws_iam_policy_document.deny_insecure_replays: Reading...[0m[0m
+[0m[1mmodule.data.data.aws_iam_policy_document.deny_insecure_replays: Read complete after 0s [id=4217157181][0m
+[0m[1mmodule.networking.aws_route_table.public: Creating...[0m[0m
+[0m[1mmodule.data.aws_s3_bucket.data_lake: Creation complete after 9s [id=runracing-demo-data-lake-224848431296][0m
+[0m[1mmodule.data.aws_s3_bucket_policy.replays_tls: Creating...[0m[0m
+[0m[1mmodule.data.aws_s3_bucket.assets: Creation complete after 10s [id=runracing-demo-assets-224848431296][0m
+[0m[1mmodule.data.aws_s3_bucket_public_access_block.data_lake: Creating...[0m[0m
+[0m[1mmodule.data.aws_s3_bucket_public_access_block.replays: Creation complete after 1s [id=runracing-demo-replays-224848431296][0m
+[0m[1mmodule.data.aws_s3_bucket_server_side_encryption_configuration.assets: Creating...[0m[0m
+[0m[1mmodule.data.aws_s3_bucket_public_access_block.data_lake: Creation complete after 0s [id=runracing-demo-data-lake-224848431296][0m
+[0m[1mmodule.data.aws_s3_bucket_public_access_block.assets: Creating...[0m[0m
+[0m[1mmodule.data.aws_s3_bucket_policy.replays_tls: Creation complete after 2s [id=runracing-demo-replays-224848431296][0m
+[0m[1mmodule.data.aws_elasticache_subnet_group.redis: Creating...[0m[0m
+[0m[1mmodule.data.aws_s3_bucket_versioning.replays: Creation complete after 2s [id=runracing-demo-replays-224848431296][0m
+[0m[1mmodule.analytics.aws_glue_crawler.telemetry: Creating...[0m[0m
+[0m[1mmodule.data.aws_s3_bucket_server_side_encryption_configuration.assets: Creation complete after 2s [id=runracing-demo-assets-224848431296][0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Creating...[0m[0m
+[0m[1mmodule.networking.aws_route_table.public: Creation complete after 3s [id=rtb-0fd192818f5f8a1f3][0m
+[0m[1mmodule.security.aws_kms_key.main: Still creating... [00m13s elapsed][0m[0m
+[0m[1mmodule.data.aws_s3_bucket_public_access_block.assets: Creation complete after 2s [id=runracing-demo-assets-224848431296][0m
+[0m[1mmodule.analytics.aws_glue_crawler.telemetry: Creation complete after 1s [id=runracing-demo-telemetry][0m
+[0m[1mmodule.data.aws_elasticache_subnet_group.redis: Creation complete after 3s [id=runracing-demo-redis][0m
+[0m[1mmodule.networking.aws_security_group.lambda: Creation complete after 7s [id=sg-02361f7955f22d440][0m
+[0m[1mmodule.networking.aws_security_group.elasticache: Creating...[0m[0m
+[0m[1mmodule.security.aws_kms_key.main: Creation complete after 16s [id=83fe7fcf-c058-4273-99da-fd7dffcad4e5][0m
+[0m[1mmodule.security.aws_kms_alias.main: Creating...[0m[0m
+[0m[1mmodule.security.aws_secretsmanager_secret.payment: Creating...[0m[0m
+[0m[1mmodule.data.aws_s3_bucket_server_side_encryption_configuration.replays: Creating...[0m[0m
+[0m[1mmodule.data.aws_dynamodb_table.players: Creating...[0m[0m
+[0m[1mmodule.analytics.aws_athena_workgroup.main: Creating...[0m[0m
+[0m[1mmodule.security.aws_kms_alias.main: Creation complete after 1s [id=alias/runracing-demo][0m
+[0m[1mmodule.data.aws_s3_bucket_server_side_encryption_configuration.data_lake: Creating...[0m[0m
+[0m[1mmodule.data.aws_s3_bucket_server_side_encryption_configuration.replays: Creation complete after 1s [id=runracing-demo-replays-224848431296][0m
+[0m[1mmodule.data.aws_dynamodb_table.leaderboards: Creating...[0m[0m
+[0m[1mmodule.analytics.aws_athena_workgroup.main: Creation complete after 1s [id=runracing-demo][0m
+[0m[1mmodule.analytics.data.aws_iam_policy_document.glue_lake: Reading...[0m[0m
+[0m[1mmodule.analytics.data.aws_iam_policy_document.glue_lake: Read complete after 0s [id=2209417411][0m
+[0m[1mmodule.data.aws_s3_bucket_server_side_encryption_configuration.data_lake: Creation complete after 0s [id=runracing-demo-data-lake-224848431296][0m
+[0m[1mmodule.analytics.aws_iam_role_policy.glue_lake: Creating...[0m[0m
+[0m[1mmodule.security.aws_secretsmanager_secret.payment: Creation complete after 2s [id=arn:aws:secretsmanager:us-east-1:224848431296:secret:runracing-demo-payment-yNxwsV][0m
+[0m[1mmodule.security.aws_secretsmanager_secret_version.payment: Creating...[0m[0m
+[0m[1mmodule.analytics.aws_iam_role_policy.glue_lake: Creation complete after 1s [id=runracing-demo-glue:runracing-demo-glue-lake][0m
+[0m[1mmodule.networking.aws_subnet.public[1]: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.networking.aws_subnet.public[0]: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.analytics.aws_kinesis_stream.telemetry: Creating...[0m[0m
+[0m[1mmodule.security.aws_secretsmanager_secret_version.payment: Creation complete after 1s [id=arn:aws:secretsmanager:us-east-1:224848431296:secret:runracing-demo-payment-yNxwsV|terraform-Necyc8kk7C88OOohyV2zk0UjUF][0m
+[0m[1mmodule.networking.aws_security_group.elasticache: Creation complete after 4s [id=sg-00c802aa36b751181][0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Creating...[0m[0m
+[0m[1mmodule.data.aws_s3_bucket_lifecycle_configuration.replays: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.networking.aws_subnet.public[0]: Creation complete after 13s [id=subnet-07db96e475eb6feed][0m
+[0m[1mmodule.networking.aws_nat_gateway.main: Creating...[0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.networking.aws_subnet.public[1]: Creation complete after 16s [id=subnet-075918811f244d7c4][0m
+[0m[1mmodule.networking.aws_route_table_association.public[1]: Creating...[0m[0m
+[0m[1mmodule.networking.aws_route_table_association.public[0]: Creating...[0m[0m
+[0m[1mmodule.data.aws_dynamodb_table.players: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.networking.aws_route_table_association.public[0]: Creation complete after 1s [id=rtbassoc-0cc95260d3dfd8962][0m
+[0m[1mmodule.networking.aws_route_table_association.public[1]: Creation complete after 1s [id=rtbassoc-0de40e48a35eb16c6][0m
+[0m[1mmodule.data.aws_dynamodb_table.players: Creation complete after 11s [id=runracing-demo-players][0m
+[0m[1mmodule.data.aws_dynamodb_table.leaderboards: Creation complete after 10s [id=runracing-demo-leaderboards][0m
+[0m[1mmodule.analytics.aws_kinesis_stream.telemetry: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.data.aws_s3_bucket_lifecycle_configuration.replays: Still creating... [00m20s elapsed][0m[0m
+[0m[1mmodule.networking.aws_nat_gateway.main: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [00m20s elapsed][0m[0m
+[0m[1mmodule.analytics.aws_kinesis_stream.telemetry: Still creating... [00m23s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [00m23s elapsed][0m[0m
+[0m[1mmodule.data.aws_s3_bucket_lifecycle_configuration.replays: Still creating... [00m33s elapsed][0m[0m
+[0m[1mmodule.networking.aws_nat_gateway.main: Still creating... [00m23s elapsed][0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [00m33s elapsed][0m[0m
+[0m[1mmodule.analytics.aws_kinesis_stream.telemetry: Still creating... [00m33s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [00m33s elapsed][0m[0m
+[0m[1mmodule.data.aws_s3_bucket_lifecycle_configuration.replays: Still creating... [00m43s elapsed][0m[0m
+[0m[1mmodule.networking.aws_nat_gateway.main: Still creating... [00m33s elapsed][0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [00m43s elapsed][0m[0m
+[0m[1mmodule.analytics.aws_kinesis_stream.telemetry: Creation complete after 38s [id=arn:aws:kinesis:us-east-1:224848431296:stream/runracing-demo-telemetry][0m
+[0m[1mmodule.analytics.data.aws_iam_policy_document.consumer: Reading...[0m[0m
+[0m[1mmodule.analytics.data.aws_iam_policy_document.firehose: Reading...[0m[0m
+[0m[1mmodule.compute.data.aws_iam_policy_document.api: Reading...[0m[0m
+[0m[1mmodule.analytics.data.aws_iam_policy_document.consumer: Read complete after 0s [id=1952157203][0m
+[0m[1mmodule.analytics.data.aws_iam_policy_document.firehose: Read complete after 0s [id=3108505763][0m
+[0m[1mmodule.compute.data.aws_iam_policy_document.api: Read complete after 0s [id=1692361073][0m
+[0m[1mmodule.analytics.aws_iam_role_policy.consumer: Creating...[0m[0m
+[0m[1mmodule.analytics.aws_iam_role_policy.firehose: Creating...[0m[0m
+[0m[1mmodule.compute.aws_iam_role_policy.api: Creating...[0m[0m
+[0m[1mmodule.analytics.aws_iam_role_policy.firehose: Creation complete after 0s [id=runracing-demo-firehose:runracing-demo-firehose-access][0m
+[0m[1mmodule.analytics.aws_iam_role_policy.consumer: Creation complete after 0s [id=runracing-demo-consumer:runracing-demo-consumer-access][0m
+[0m[1mmodule.analytics.aws_lambda_function.consumer: Creating...[0m[0m
+[0m[1mmodule.analytics.aws_kinesis_firehose_delivery_stream.to_lake: Creating...[0m[0m
+[0m[1mmodule.compute.aws_iam_role_policy.api: Creation complete after 0s [id=runracing-demo-api-lambda:runracing-demo-api-access][0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [00m43s elapsed][0m[0m
+[0m[1mmodule.data.aws_s3_bucket_lifecycle_configuration.replays: Still creating... [00m53s elapsed][0m[0m
+[0m[1mmodule.networking.aws_nat_gateway.main: Still creating... [00m43s elapsed][0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [00m53s elapsed][0m[0m
+[0m[1mmodule.analytics.aws_lambda_function.consumer: Creation complete after 8s [id=runracing-demo-consumer][0m
+[0m[1mmodule.analytics.aws_lambda_event_source_mapping.consumer: Creating...[0m[0m
+[0m[1mmodule.analytics.aws_kinesis_firehose_delivery_stream.to_lake: Creation complete after 9s [id=arn:aws:firehose:us-east-1:224848431296:deliverystream/runracing-demo-to-lake][0m
+[0m[1mmodule.analytics.aws_lambda_event_source_mapping.consumer: Creation complete after 2s [id=5853415d-bc91-4e80-a47c-70d7f0972162][0m
+[0m[1mmodule.data.aws_s3_bucket_lifecycle_configuration.replays: Creation complete after 1m2s [id=runracing-demo-replays-224848431296][0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [00m57s elapsed][0m[0m
+[0m[1mmodule.networking.aws_nat_gateway.main: Still creating... [00m56s elapsed][0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [01m06s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [01m07s elapsed][0m[0m
+[0m[1mmodule.networking.aws_nat_gateway.main: Still creating... [01m06s elapsed][0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [01m16s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [01m17s elapsed][0m[0m
+[0m[1mmodule.networking.aws_nat_gateway.main: Still creating... [01m16s elapsed][0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [01m26s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [01m27s elapsed][0m[0m
+[0m[1mmodule.networking.aws_nat_gateway.main: Still creating... [01m26s elapsed][0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [01m39s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [01m40s elapsed][0m[0m
+[0m[1mmodule.networking.aws_nat_gateway.main: Still creating... [01m39s elapsed][0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [01m49s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [01m50s elapsed][0m[0m
+[0m[1mmodule.networking.aws_nat_gateway.main: Still creating... [01m49s elapsed][0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [01m59s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [02m00s elapsed][0m[0m
+[0m[1mmodule.networking.aws_nat_gateway.main: Creation complete after 1m58s [id=nat-0f148d5d8d843e577][0m
+[0m[1mmodule.networking.aws_route_table.private: Creating...[0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [02m09s elapsed][0m[0m
+[0m[1mmodule.networking.aws_route_table.private: Creation complete after 5s [id=rtb-0c73fa78b746427c3][0m
+[0m[1mmodule.networking.aws_route_table_association.private[1]: Creating...[0m[0m
+[0m[1mmodule.networking.aws_route_table_association.private[0]: Creating...[0m[0m
+[0m[1mmodule.networking.aws_vpc_endpoint.s3: Creating...[0m[0m
+[0m[1mmodule.networking.aws_vpc_endpoint.dynamodb: Creating...[0m[0m
+[0m[1mmodule.networking.aws_route_table_association.private[1]: Creation complete after 2s [id=rtbassoc-034b85b373602fc88][0m
+[0m[1mmodule.networking.aws_route_table_association.private[0]: Creation complete after 2s [id=rtbassoc-06918ce2b3517b26b][0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [02m13s elapsed][0m[0m
+[0m[1mmodule.networking.aws_vpc_endpoint.s3: Creation complete after 8s [id=vpce-012d88696480cc949][0m
+[0m[1mmodule.networking.aws_vpc_endpoint.dynamodb: Creation complete after 9s [id=vpce-0524275df90f93682][0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [02m22s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [02m23s elapsed][0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [02m32s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [02m33s elapsed][0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [02m42s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [02m46s elapsed][0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [02m55s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [02m56s elapsed][0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [03m05s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [03m06s elapsed][0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [03m15s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [03m20s elapsed][0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [03m29s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [03m30s elapsed][0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Still creating... [03m39s elapsed][0m[0m
+[0m[1mmodule.edge.aws_cloudfront_distribution.assets: Creation complete after 3m45s [id=E2JBX6FY4LXUQM][0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [03m40s elapsed][0m[0m
+[0m[1mmodule.edge.data.aws_iam_policy_document.assets_oac: Reading...[0m[0m
+[0m[1mmodule.edge.data.aws_iam_policy_document.assets_oac: Read complete after 0s [id=237773889][0m
+[0m[1mmodule.edge.aws_s3_bucket_policy.assets_oac: Creating...[0m[0m
+[0m[1mmodule.edge.aws_s3_bucket_policy.assets_oac: Creation complete after 2s [id=runracing-demo-assets-224848431296][0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [03m50s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [04m03s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [04m13s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [04m23s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [04m36s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Still creating... [04m46s elapsed][0m[0m
+[0m[1mmodule.data.aws_elasticache_replication_group.redis: Creation complete after 4m47s [id=runracing-demo-redis][0m
+[0m[1mmodule.compute.aws_lambda_function.api: Creating...[0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [00m23s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [00m33s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [00m43s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [00m57s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [01m07s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [01m17s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [01m30s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [01m40s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [01m50s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [02m03s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [02m13s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [02m23s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [02m33s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [02m46s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [02m56s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [03m06s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [03m20s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [03m30s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Still creating... [03m40s elapsed][0m[0m
+[0m[1mmodule.compute.aws_lambda_function.api: Creation complete after 3m52s [id=runracing-demo-api][0m
+[0m[1mmodule.compute.aws_lambda_permission.apigw: Creating...[0m[0m
+[0m[1mmodule.compute.aws_apigatewayv2_integration.lambda: Creating...[0m[0m
+[0m[1mmodule.compute.aws_cloudwatch_metric_alarm.api_errors: Creating...[0m[0m
+[0m[1mmodule.compute.aws_lambda_permission.apigw: Creation complete after 1s [id=AllowAPIGatewayInvoke][0m
+[0m[1mmodule.compute.aws_apigatewayv2_integration.lambda: Creation complete after 1s [id=lc0w78e][0m
+[0m[1mmodule.compute.aws_apigatewayv2_route.health: Creating...[0m[0m
+[0m[1mmodule.compute.aws_cloudwatch_metric_alarm.api_errors: Creation complete after 2s [id=runracing-demo-api-errors][0m
+[0m[1mmodule.compute.aws_apigatewayv2_route.health: Creation complete after 1s [id=gswl99i][0m
+Releasing state lock. This may take a few moments...
+[0m[1m[32m
+Apply complete! Resources: 70 added, 0 changed, 0 destroyed.[0m
+[0m[1m[32m
+Outputs:
+
+[0mapi_health_url = "https://c7ejbtbh50.execute-api.us-east-1.amazonaws.com/health"
+assets_bucket = "runracing-demo-assets-224848431296"
+athena_workgroup = "runracing-demo"
+cloudfront_domain = "dmuz9eerzslob.cloudfront.net"
+consumer_function = "runracing-demo-consumer"
+data_lake_bucket = "runracing-demo-data-lake-224848431296"
+glue_database = "runracing_demo_analytics"
+leaderboards_table = "runracing-demo-leaderboards"
+players_table = "runracing-demo-players"
+redis_primary_endpoint = "master.runracing-demo-redis.w7zzq6.use1.cache.amazonaws.com"
+replays_bucket = "runracing-demo-replays-224848431296"
+telemetry_stream = "runracing-demo-telemetry"
+APPLY_EXIT=0

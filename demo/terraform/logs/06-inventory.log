@@ -1,0 +1,104 @@
+################ RESOURCE INVENTORY ################
+=== terraform state list ===
+data.aws_caller_identity.current
+module.analytics.data.archive_file.consumer
+module.analytics.data.aws_iam_policy_document.consumer
+module.analytics.data.aws_iam_policy_document.consumer_assume
+module.analytics.data.aws_iam_policy_document.firehose
+module.analytics.data.aws_iam_policy_document.firehose_assume
+module.analytics.data.aws_iam_policy_document.glue_assume
+module.analytics.data.aws_iam_policy_document.glue_lake
+module.analytics.aws_athena_workgroup.main
+module.analytics.aws_cloudwatch_log_group.consumer
+module.analytics.aws_cloudwatch_log_group.firehose
+module.analytics.aws_cloudwatch_log_stream.firehose
+module.analytics.aws_glue_catalog_database.analytics
+module.analytics.aws_glue_crawler.telemetry
+module.analytics.aws_iam_role.consumer
+module.analytics.aws_iam_role.firehose
+module.analytics.aws_iam_role.glue
+module.analytics.aws_iam_role_policy.consumer
+module.analytics.aws_iam_role_policy.firehose
+module.analytics.aws_iam_role_policy.glue_lake
+module.analytics.aws_iam_role_policy_attachment.glue_service
+module.analytics.aws_kinesis_firehose_delivery_stream.to_lake
+module.analytics.aws_kinesis_stream.telemetry
+module.analytics.aws_lambda_event_source_mapping.consumer
+module.analytics.aws_lambda_function.consumer
+module.compute.data.archive_file.lambda
+module.compute.data.aws_iam_policy_document.api
+module.compute.data.aws_iam_policy_document.assume
+module.compute.aws_apigatewayv2_api.http
+module.compute.aws_apigatewayv2_integration.lambda
+module.compute.aws_apigatewayv2_route.health
+module.compute.aws_apigatewayv2_stage.default
+module.compute.aws_cloudwatch_log_group.api
+module.compute.aws_cloudwatch_metric_alarm.api_errors
+module.compute.aws_iam_role.api
+module.compute.aws_iam_role_policy.api
+module.compute.aws_iam_role_policy_attachment.vpc
+module.compute.aws_lambda_function.api
+module.compute.aws_lambda_permission.apigw
+module.data.data.aws_iam_policy_document.deny_insecure_replays
+module.data.aws_dynamodb_table.leaderboards
+module.data.aws_dynamodb_table.players
+module.data.aws_elasticache_replication_group.redis
+module.data.aws_elasticache_subnet_group.redis
+module.data.aws_s3_bucket.assets
+module.data.aws_s3_bucket.data_lake
+module.data.aws_s3_bucket.replays
+module.data.aws_s3_bucket_lifecycle_configuration.replays
+module.data.aws_s3_bucket_policy.replays_tls
+module.data.aws_s3_bucket_public_access_block.assets
+module.data.aws_s3_bucket_public_access_block.data_lake
+module.data.aws_s3_bucket_public_access_block.replays
+module.data.aws_s3_bucket_server_side_encryption_configuration.assets
+module.data.aws_s3_bucket_server_side_encryption_configuration.data_lake
+module.data.aws_s3_bucket_server_side_encryption_configuration.replays
+module.data.aws_s3_bucket_versioning.replays
+module.edge.data.aws_iam_policy_document.assets_oac
+module.edge.aws_cloudfront_distribution.assets
+module.edge.aws_cloudfront_origin_access_control.assets
+module.edge.aws_s3_bucket_policy.assets_oac
+module.edge.aws_wafv2_web_acl.main
+module.networking.data.aws_availability_zones.available
+module.networking.aws_eip.nat
+module.networking.aws_internet_gateway.main
+module.networking.aws_nat_gateway.main
+module.networking.aws_route_table.private
+module.networking.aws_route_table.public
+module.networking.aws_route_table_association.private[0]
+module.networking.aws_route_table_association.private[1]
+module.networking.aws_route_table_association.public[0]
+module.networking.aws_route_table_association.public[1]
+module.networking.aws_security_group.elasticache
+module.networking.aws_security_group.lambda
+module.networking.aws_subnet.private[0]
+module.networking.aws_subnet.private[1]
+module.networking.aws_subnet.public[0]
+module.networking.aws_subnet.public[1]
+module.networking.aws_vpc.main
+module.networking.aws_vpc_endpoint.dynamodb
+module.networking.aws_vpc_endpoint.s3
+module.security.aws_kms_alias.main
+module.security.aws_kms_key.main
+module.security.aws_secretsmanager_secret.payment
+module.security.aws_secretsmanager_secret_version.payment
+
+=== resource count ===
+84
+
+=== terraform outputs ===
+api_health_url = "https://c7ejbtbh50.execute-api.us-east-1.amazonaws.com/health"
+assets_bucket = "runracing-demo-assets-224848431296"
+athena_workgroup = "runracing-demo"
+cloudfront_domain = "dmuz9eerzslob.cloudfront.net"
+consumer_function = "runracing-demo-consumer"
+data_lake_bucket = "runracing-demo-data-lake-224848431296"
+glue_database = "runracing_demo_analytics"
+leaderboards_table = "runracing-demo-leaderboards"
+players_table = "runracing-demo-players"
+redis_primary_endpoint = "master.runracing-demo-redis.w7zzq6.use1.cache.amazonaws.com"
+replays_bucket = "runracing-demo-replays-224848431296"
+telemetry_stream = "runracing-demo-telemetry"
+################ END INVENTORY ################

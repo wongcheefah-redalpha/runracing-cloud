@@ -1,0 +1,83 @@
+CA: “Thank you for meeting me today. I understand that you want to build mobile games with multiplayer capabilities. Can you tell me a bit more about your plan?”
+
+GC: “Yes, we are a game studio planning to launch several mobile games over the next year. Our first game will be a real-time multiplayer racing game where 8 players can compete simultaneously. At launch, we want to support at least 100,000 concurrent players.”
+
+CA: “That’s helpful information. Tell me, why did you decide to build this game now? Are there any specific market opportunities you’re focusing on?”
+
+GC: “Mobile racing games are trending, but most are either single-player or have lag issues in multiplayer. We believe we can capture market share by offering a smooth real-time multiplayer experience. Also, our investors want the first game to launch within 8 months.”
+
+CA: “Understood. Low latency will be critical for a racing game. Can you tell me about your current technical setup and team?”
+
+GC: “We have a team of 15 game developers experienced in Unity, but we’re new to cloud infrastructure. Right now, we’re using Unity’s built-in networking, but it’s not scaling well in our tests. We need something more robust.”
+
+CA: “That’s very useful information. For a real-time multiplayer racing game like this, we’ll need to design the backend carefully. Are there specific regions you’re targeting for launch?”
+
+GC: “Initially, we’ll launch in North America and Europe, but we plan to expand to Asia within six months. We expect most players will be on iOS and Android phones.”
+
+CA: “Okay. I think we should use a multi-region architecture, with game servers located close to players to minimize latency. AWS GameLift or Google Cloud’s game servers could be good options. For the backend, we should consider:
+
+- A matchmaking service to group players based on skill and latency
+- Real-time game servers where the actual races happen
+- Player profiles and authentication system
+- Leaderboards and stats storage
+- A scalable database for player data
+
+What’s your budget?”
+
+GC: “We’ve allocated about ₹1.5 crore (around $200,000) for cloud infrastructure in the first year. Our main concern is being able to scale quickly if the game goes viral.”
+
+CA: “That’s a reasonable budget. We can set up auto-scaling to handle spikes in player numbers, while optimizing costs during low-traffic periods. What are your thoughts on downtime? How would it impact your business if the game goes offline?”
+
+GC: “Even a little downtime could hurt our reputation. We need at least 99.9% uptime, and during races, if a connection drops for more than a few seconds, it will ruin the player experience.”
+
+CA: “Understood. We’ll need a solid disaster recovery plan. I think we should use active-active deployments and hot failover. For the data layer, we should consider globally distributed databases like Cosmos DB or DynamoDB. What are your security requirements? Will you support in-app purchases?”
+
+GC: “Yes, we’ll have in-app purchases and will need to store players’ payment information. We also need to comply with GDPR and COPPA since we’ll have players under 13.”
+
+CA: “Got it. We’ll need to implement encryption, tokenization, and age verification systems for payment data. For GDPR, we’ll set up data export and deletion processes. Would you like a detailed architecture proposal that includes cost and scaling projections?”
+
+GC: “Yes, that would be great. One more thing—we plan to add features like replay sharing and ghost races in the future. Should we include that in the initial architecture?”
+
+CA: “Absolutely. We can design the storage and CDN architecture to support replay files, even if we don’t implement the feature right away. It’s easier to plan for it now than retrofit later. I’ll include that in the proposal, along with a step-by-step implementation plan.”
+
+CA: “Before I start working on the proposal, I want to understand your data needs a bit more. How much data do you expect per player?”
+
+GC: “Each player profile will store their stats, customizations, and progress data. We’ll also need to store race history, replay data, and leaderboard positions. Additionally, we’re planning seasonal events and want to keep historical data for analytics.”
+
+CA: “Do you have an estimate for the average size of replay data per race?”
+
+GC: “Each race replay will be around 1MB, and players usually play 5–10 races per day. We want to keep the last 30 days of replays available for players.”
+
+CA: “Thanks, that will help with storage planning. Now let’s talk about monitoring and operations. Once the infrastructure is set up, who will manage it?”
+
+GC: “We have two DevOps engineers joining next month, but they’re more experienced with CI/CD than cloud operations. We may need some guidance here.”
+
+CA: “It’s best to set up comprehensive monitoring and alerting from the start. We can use tools like Datadog or New Relic to monitor application performance. Would you want 24/7 operational support?”
+
+GC: “Yes, especially since we’re targeting multiple time zones. What would you recommend for structuring our operations team?”
+
+CA: “Given your scale, I’d recommend at least three SREs working in shifts, along with your DevOps team. We can also set up automated response systems for common issues. How will you handle updates and maintenance?”
+
+GC: “We’re planning weekly content updates and monthly feature releases. We’ll need to do all this with minimal downtime.”
+
+CA: “In that case, we should implement a blue-green deployment strategy. We can roll out updates to race servers gradually across regions, especially during low-traffic periods. Have you thought about your testing strategy?”
+
+GC: “We’ll need a staging environment and a beta testing program for real players. How would you structure that?”
+
+CA: “We can set up three environments: development, staging, and production. For beta testing, we can create a separate, limited-capacity environment that mirrors production. How many beta testers are you targeting?”
+
+GC: “We’re planning for 10,000 beta testers from various regions.”
+
+CA: “That’s a solid number for stress-testing the system. Now let’s talk analytics. What kind of data analysis will you need?”
+
+GC: “We want to track player engagement, monetization metrics, and game balance. We’ll also need real-time analytics to detect cheating or abnormal behavior.”
+
+CA: “We can set up event tracking in the game client and use BigQuery or Snowflake for deep analysis. This will help with game design and retention strategies. Which success metrics will you track?”
+
+GC: “We’ll track DAU/MAU, ARPU, retention rates, and match completion rates. We’ll also monitor technical metrics like matchmaking times and server performance.”
+
+CA: “Those are good KPIs. We can set up real-time dashboards for them. Last question—how will you handle customer support? Will you integrate with any tools?”
+
+GC: “We’ll use Zendesk, and we’ll need access to player data and match history to investigate issues.”
+
+CA: “We can build secure APIs for your support team to access that data, along with proper logging for security. I’ll include this in the proposal.”
