@@ -20,7 +20,10 @@ runracing-cloud/
 │   ├── 04-deployment-log.md                                # clean-slate deploy run + resource inventory
 │   ├── runracing-multiregion-architecture.drawio          # editable diagram source
 │   ├── runracing-multiregion-architecture.drawio.png      # diagram (PNG)
-│   └── runracing-multiregion-architecture.drawio.svg      # diagram (SVG)
+│   ├── runracing-multiregion-architecture.drawio.svg      # diagram (SVG)
+│   ├── runracing-production-multiregion-architecture.drawio      # detailed production diagram (source)
+│   ├── runracing-production-multiregion-architecture.drawio.png  # detailed production diagram (PNG)
+│   └── runracing-production-multiregion-architecture.drawio.svg  # detailed production diagram (SVG)
 ├── demo/
 │   └── terraform/                 # the deployed single-region demo stack
 │       ├── bootstrap/             # remote state backend (S3 bucket; run once)
@@ -47,6 +50,7 @@ how it maps to the architecture.
 | Scope of Work (SOW) | [docs/02-sow.md](docs/02-sow.md) and PDF export [docs/02-sow.pdf](docs/02-sow.pdf) |
 | Architecture design | [docs/03-architecture.md](docs/03-architecture.md) |
 | Architecture diagram | [docs/runracing-multiregion-architecture.drawio.png](docs/runracing-multiregion-architecture.drawio.png) (editable [.drawio](docs/runracing-multiregion-architecture.drawio), vector [.svg](docs/runracing-multiregion-architecture.drawio.svg)) |
+| Architecture diagram — detailed production (multi-region active-active, both regions) | [docs/runracing-production-multiregion-architecture.drawio.png](docs/runracing-production-multiregion-architecture.drawio.png) (editable [.drawio](docs/runracing-production-multiregion-architecture.drawio), vector [.svg](docs/runracing-production-multiregion-architecture.drawio.svg)) |
 | Requirements + decisions log (D-1..D-20) | [docs/01-requirements-and-architectural-implications.md](docs/01-requirements-and-architectural-implications.md) |
 | Deployment log, validation evidence, resource inventory | [docs/04-deployment-log.md](docs/04-deployment-log.md) |
 | Terraform — deployed/validated single-region demo | [demo/terraform/](demo/terraform/) |
